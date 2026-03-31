@@ -1,0 +1,8 @@
+/* kleur voor al geregistreerde personen*/
+.registered {
+  color: green;
+}
+/* kleur voor personen die nog niet geregistreerd waren*/
+.nonRegistered {
+  color: red;
+}

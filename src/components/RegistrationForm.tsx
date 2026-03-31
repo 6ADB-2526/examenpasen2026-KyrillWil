@@ -21,6 +21,7 @@ function RegistrationForm({ onRegister }: Props) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Gebruikersregistratie</h1>
       <input
         type="text"
         ref={inputRef}
