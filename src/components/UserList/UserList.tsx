@@ -2,10 +2,9 @@ import "./UserList.css";
 
 //interface voor een nieuwe user
 interface User {
-  id: number;
   naam: string;
 }
-//interface voor users die er al in waren
+// interface voor users die er al in waren
 interface RegisteredUser {
   naam: string;
 }
