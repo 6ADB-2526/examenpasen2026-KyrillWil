@@ -11,17 +11,16 @@ export default function App() {
   const GeregistreerdePersonen = ["Karel", "Els", "Piet"];
   //dynamische lijst voor users toe te voegen(id en voornaam is even weggelaten hier en ook uit UserList omdat het eerst met naam moet werken)
   const [newUser, setNewUser] = useState([{ naam: "" }]);
-  //functie die de nieuwe namen toevoegd aan de lijst
-  function voegToe(name: User) {
-    const newList = name;
-    setNewUser({ ...newUser, name });
+  //functie die de nieuwe formDatan toevoegd aan de lijst
+  function voegToe(formData: User) {
+    const newList = setNewUser({ ...newUser, formData }); //maak een nieuwe lijst en spread de data van newUser uit en voeg het nieuwe data erbij
     return newList;
   }
   return (
     <div>
       <RegistrationForm onRegister={voegToe} />
       <hr />
-      <UserList registeredUsers={GeregistreerdePersonen} users={newList} />
+      <UserList registeredUsers={GeregistreerdePersonen} users={newUser} />
     </div>
   );
 }
